@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/css/output.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fddab9acea.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+  <nav class="nav-bar sticky top-0 left-0 right-0 w-full flex flex-col justify-center items-center bg-white">
+    <div class="grd-1 w-full max-w-[1000px] flex justify-between items-center p-4">
+      <img src="src/img/1714786497399.jpg" alt="Logo" class="object-cover bg-center bg-no-repeat bg-cover" width="50px" height="50px"/>
+      <div class="nav-search px-[13px] py-[6px] border border-gray-400 rounded">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" class="p-1 border-0 outline-0" name="search_product" id="search_product" placeholder="Search"/>
+      </div>
+      <div class="md:hidden toggle h-[20px] flex flex-col justify-between">
+        <span class="w-[28px] h-[3px] rounded bg-gray-800"></span>
+        <span class="w-[28px] h-[3px] rounded bg-gray-800"></span>
+        <span class="w-[28px] h-[3px] rounded bg-gray-800"></span>
+      </div>
+    </div>
+    <div class="grd-2 w-full max-w-[1000px] flex hidden flex-col justify-between items-center md:flex md:flex-row">
+      <ul class="nav-link max-h-[250px] overflow-auto w-full flex flex-col justify-between items-center md:flex-row" style="font-family: 'Poppins', sans-serif;">
+        <li class="p-3 md:p-0"><a href="#">Home</a></li>
+        <li class="p-3 md:p-0"><a href="#">Product</a></li>
+        <li class="p-3 md:p-0"><a href="#">Invoice</a></li>
+        <li class="p-3 md:p-0"><a href="#">Cart</a></li>
+        <li class="p-3 md:p-0"><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="w-full m-auto flex flex-col justify-center items-center">
+    
+    <div class="grd-1 w-full max-w-[1000px] flex flex-col justify-center items-center pt-16 pb-28 pr-2 pl-2 mb-3 ">
+      
+      <div class="grd-1 w-full flex flex-col md:flex-row justify-center md:justify-between items-center p-1 mb-7">
+        <img src="src/img/c1.jpeg" alt="Hero Section 1" class="w-full h-[100px] rounded-[10px] object-cover md:w-[225px] md:h-[125px] md:rounded-full">
+        <p class="text-5xl font-bold lg:text-8xl md:text-7xl md:font-black font-sans mt-3 md:mt-0">Jelajahi koleksi</p>
+      </div>
+      
+      <div class="grd-2 w-full flex flex-row justify-between items-center p-1 mb-7">
+         <p class="text-4xl md:text-7xl font-sans">Yang anda</p>
+         <img src="src/img/c2.png" alt="Hero Section 2" class="w-[70%] h-[150px] object-cover bg-center rounded-bl-3xl rounded-br-3xl rounded-tl-3xl md:rounded-bl-full md:rounded-br-full md:rounded-tl-full">
+      </div>
+      
+      <div class="grd-3 w-full flex flex-col md:flex-row-reverse justify-center md:justify-between items-center p-1">
+        <p class="text-5xl font-bold lg:text-8xl md:text-7xl md:font-black font-sans mb-3 md:mb-0">Inginkan</p>
+        <img src="src/img/c3.jpg" alt="Hero Section 3" class="w-full md:w-[70%] h-[150px] object-cover bg-center rounded-3xl md:rounded-bl-0 md:rounded-br-full md:rounded-tl-0 md:rounded-tr-full">
+      </div>
+    </div>
+    
+    <div class="wrap_card w-full max-w-[1000px] flex flex-wrap justify-between items-center p-2 gap-4" style="font-family: 'Poppins', sans-serif;">
+      <form action="proses-tambah-keranjang.php" method="GET" class="card_item w-[185px] md:w-[200px]" data-kategori="<?= $siswa['kategori_produk']; ?>">
+          <input type='text' class="hidden" name='username' id='username' value='<?=
+            $username ?>' readonly>
+          <input type='text' class="hidden" name='id' id='id' readonly>
+          <input type='text' class="hidden" name='gambar_barang' id='gambar_barang' readonly>
+          <img src='img/iphone-pro-max (1).webp' class='gambar w-full h-[125px] bg-cover bg-origin-border bg-center object-cover rounded md:h-[200px]'>
+          <input type='text' class="w-full bg-transparent text-[16px] md:text-[20px] font-bold border-0 outline-0 mt-3 whitespace-nowrap overflow-hidden text-ellipsis" name='nama_barang' id='nama_barang' value='iPhone 15 Pro Max' readonly>
+          <input type='text' class="bg-transparent mt-2 border-0 outline-0" name='harga_barang' id='harga_barang' value='Rp.23,249,000' readonly>
+          <button type='submit' class='beli_barang bg-black text-white text-[16px] rounded px-7 hover:bg-white hover:text-black hover:shadow hover:shadow-gray-300 py-2 mt-2' name='beli_barang'>Beli</button>
+        </form>
+      <form action="proses-tambah-keranjang.php" method="GET" class="card_item w-[185px] md:w-[200px]" data-kategori="<?= $siswa['kategori_produk']; ?>">
+          <input type='text' class="hidden" name='username' id='username' value='<?=
+            $username ?>' readonly>
+          <input type='text' class="hidden" name='id' id='id' readonly>
+          <input type='text' class="hidden" name='gambar_barang' id='gambar_barang' readonly>
+          <img src='img/iphone-pro-max (1).webp' class='gambar w-full h-[125px] bg-cover bg-origin-border bg-center object-cover rounded md:h-[200px]'>
+          <input type='text' class="w-full bg-transparent text-[16px] md:text-[20px] font-bold border-0 outline-0 mt-3 whitespace-nowrap overflow-hidden text-ellipsis" name='nama_barang' id='nama_barang' value='iPhone 15 Pro Max' readonly>
+          <input type='text' class="bg-transparent mt-2 border-0 outline-0" name='harga_barang' id='harga_barang' value='Rp.23,249,000' readonly>
+          <button type='submit' class='beli_barang bg-black text-white text-[16px] rounded px-7 hover:bg-white hover:text-black hover:shadow hover:shadow-gray-300 py-2 mt-2' name='beli_barang'>Beli</button>
+        </form>
+      <form action="proses-tambah-keranjang.php" method="GET" class="card_item w-[185px] md:w-[200px]" data-kategori="<?= $siswa['kategori_produk']; ?>">
+          <input type='text' class="hidden" name='username' id='username' value='<?=
+            $username ?>' readonly>
+          <input type='text' class="hidden" name='id' id='id' readonly>
+          <input type='text' class="hidden" name='gambar_barang' id='gambar_barang' readonly>
+          <img src='img/iphone-pro-max (1).webp' class='gambar w-full h-[125px] bg-cover bg-origin-border bg-center object-cover rounded md:h-[200px]'>
+          <input type='text' class="w-full bg-transparent text-[16px] md:text-[20px] font-bold border-0 outline-0 mt-3 whitespace-nowrap overflow-hidden text-ellipsis" name='nama_barang' id='nama_barang' value='iPhone 15 Pro Max' readonly>
+          <input type='text' class="bg-transparent mt-2 border-0 outline-0" name='harga_barang' id='harga_barang' value='Rp.23,249,000' readonly>
+          <button type='submit' class='beli_barang bg-black text-white text-[16px] rounded px-7 hover:bg-white hover:text-black hover:shadow hover:shadow-gray-300 py-2 mt-2' name='beli_barang'>Beli</button>
+        </form>
+      <form action="proses-tambah-keranjang.php" method="GET" class="card_item w-[185px] md:w-[200px]" data-kategori="<?= $siswa['kategori_produk']; ?>">
+          <input type='text' class="hidden" name='username' id='username' value='<?=
+            $username ?>' readonly>
+          <input type='text' class="hidden" name='id' id='id' readonly>
+          <input type='text' class="hidden" name='gambar_barang' id='gambar_barang' readonly>
+          <img src='img/iphone-pro-max (1).webp' class='gambar w-full h-[125px] bg-cover bg-origin-border bg-center object-cover rounded md:h-[200px]'>
+          <input type='text' class="w-full bg-transparent text-[16px] md:text-[20px] font-bold border-0 outline-0 mt-3 whitespace-nowrap overflow-hidden text-ellipsis" name='nama_barang' id='nama_barang' value='iPhone 15 Pro Max' readonly>
+          <input type='text' class="bg-transparent mt-2 border-0 outline-0" name='harga_barang' id='harga_barang' value='Rp.23,249,000' readonly>
+          <button type='submit' class='beli_barang bg-black text-white text-[16px] rounded px-7 hover:bg-white hover:text-black hover:shadow hover:shadow-gray-300 py-2 mt-2' name='beli_barang'>Beli</button>
+        </form>
+
+        
+    </div>
+    
+    <div class="FAQs w-full max-w-[1000px] pt-36 pb-32 px-2">
+      <p class="title text-4xl font-black mb-10"     style="font-family: 'Poppins', sans-serif;">Frequently asked questions</p>
+      
+      <div class="wrap_question w-full flex flex-col md:flex-row md:flex-wrap justify-between items-center" style="font-family: 'Poppins', sans-serif;">
+        
+        <div class="cardQuestion w-full md:w-[45%] flex flex-col justify-center items-center py-6 border-t-2 border-t-gray-100 border-b-2 border-b-gray-100">
+          <div class="grid1 w-full flex justify-between items-center mb-2">
+            <p class="text-[18px] font-semibold w-[80%]">What's the best thing about Switzerland?</p>
+            <button class="btn md:hidden">+</button>
+          </div>
+          <p class="hidden md:block deskripsi text-[18px] mt-2 text-slate-500">
+            I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+          </p>
+        </div>
+        <div class="cardQuestion w-full md:w-[45%] flex flex-col justify-center items-center py-6 border-t-2 border-t-gray-100 border-b-2 border-b-gray-100">
+          <div class="grid1 w-full flex justify-between items-center mb-2">
+            <p class="text-[18px] font-semibold w-[80%]">What's the best thing about Switzerland?</p>
+            <button class="btn md:hidden">+</button>
+          </div>
+          <p class="hidden md:block deskripsi text-[18px] mt-2 text-slate-500">
+            I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+          </p>
+        </div>
+        <div class="cardQuestion w-full md:w-[45%] flex flex-col justify-center items-center py-6 border-t-2 border-t-gray-100 border-b-2 border-b-gray-100">
+          <div class="grid1 w-full flex justify-between items-center mb-2">
+            <p class="text-[18px] font-semibold w-[80%]">What's the best thing about Switzerland?</p>
+            <button class="btn md:hidden">+</button>
+          </div>
+          <p class="hidden md:block deskripsi text-[18px] mt-2 text-slate-500">
+            I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+          </p>
+        </div>
+        <div class="cardQuestion w-full md:w-[45%] flex flex-col justify-center items-center py-6 border-t-2 border-t-gray-100 border-b-2 border-b-gray-100">
+          <div class="grid1 w-full flex justify-between items-center mb-2">
+            <p class="text-[18px] font-semibold w-[80%]">What's the best thing about Switzerland?</p>
+            <button class="btn md:hidden">+</button>
+          </div>
+          <p class="hidden md:block deskripsi text-[18px] mt-2 text-slate-500">
+            I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact w-full pt-28 pb-28 px-2 bg-slate-100" style="font-family: 'Poppins', sans-serif;">
+       <div class="grid1 w-full max-w-[1000px] m-auto">
+         <p class="text-4xl font-black mb-5">Get In Touch</p>
+         <p class="mb-4 text-[18px] text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quas accusantium nisi aliquid dolorem aut, cumque perspiciatis sed, quis aspernatur, neque. Voluptas et consequatur sed!</p>
+         <div class="w-full max-w-[250px] flex justify-start items-center gap-3 mb-2 text-slate-500">
+           <i>l</i>
+           <p>545 Mavis Island Chicago, IL 99191</p>
+         </div>
+         <div class="w-full max-w-[250px] flex justify-start items-center gap-3 mb-2 text-slate-500">
+           <i>l</i>
+           <p>Telephone +1 (555) 234-5678</p>
+         </div>
+         <div class="w-full max-w-[250px] flex justify-start items-center gap-3 mb-2 text-slate-500">
+           <i>l</i>
+           <p>Email hello@example.com</p>
+         </div>
+       </div>
+    </div>
+    
+  <div class="form_contact w-full max-w-[1000px] m-auto py-20 px-2">
+    <form action="" style="font-family: 'Poppins', sans-serif;">
+      <div class="w-full flex flex-col justify-center items-start mb-10">
+        <label for="username" class="text-[20px] font-bold mb-2">Username</label>
+        <input type="text" class="w-full bg-white border-2 border-slate-300 px-3 py-2 rounded-md outline-none focus:border-sky-500" name="username" id="username" placeholder="Masukan Nama anda" required/>
+      </div>
+      
+      <div class="w-full flex flex-col justify-center items-start mb-10">
+        <label for="username" class="text-[20px] font-bold mb-2">Email</label>
+        <input type="email" class="w-full bg-white border-2 border-slate-300 px-3 py-2 rounded-md outline-none focus:border-sky-500" name="email" id="email" placeholder="Masukan email anda" required/>
+      </div>
+      
+      <div class="w-full flex flex-col justify-center items-start mb-10">
+        <label for="username" class="text-[20px] font-bold mb-2">Message</label>
+        <textarea name="message" id=message class="w-full h-[150px] bg-white border-2 border-slate-300 px-3 py-2 rounded-md outline-none focus:border-sky-500" placeholder="Masukan pesan yang ingin dikirimkan"></textarea>
+      </div>
+      
+      <button type='submit' class='beli_barang bg-black text-white text-[16px] rounded px-7 hover:bg-white hover:text-black hover:shadow hover:shadow-gray-300 py-2 mt-2' name='beli_barang'>Kirim</button>
+    </form>
+  </div>
+  
+  <div class="footer-section w-full flex flex-col justify-center items-center px-2" style="font-family: 'Poppins', sans-serif;">
+    <footer class="w-full max-w-[1000px] py-20 flex flex-col justify-center items-center border-t-2 border-t-slate-400">
+      <div class="logo w-full flex justify-center flex-wrap items-center gap-4 mb-10">
+        <i class="fa-brands fa-facebook text-[26px] text-slate-400 hover:text-slate-700 transition-all ease-in-out duration-300"></i>
+        <i class="fa-brands fa-instagram text-[26px] text-slate-400 hover:text-slate-700 transition-all ease-in-out duration-300"></i>
+        <i class="fa-brands fa-x-twitter text-[26px] text-slate-400 hover:text-slate-700 transition-all ease-in-out duration-300"></i>
+        <i class="fa-brands fa-github text-[26px] text-slate-400 hover:text-slate-700 transition-all ease-in-out duration-300"></i>
+        <i class="fa-brands fa-youtube text-[26px] text-slate-400 hover:text-slate-700 transition-all ease-in-out duration-300"></i>
+      </div>
+      <p class="text-slate-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+    </footer>
+  </div>
+    
+<script src="src/js/user.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
